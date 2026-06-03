@@ -9,18 +9,18 @@
 
 :root {
   --purple: #4A40BA;
-  --purple-dark: #2E2B8F;
-  --purple-deep: #1D1D1B;
+  --purple-dark: #3730A3;
+  --purple-deep: #312B8E;
   --purple-light: #EDECF8;
-  --purple-mid: #7B74D6;
-  --red: #FF1D25;
-  --red-dark: #CC0008;
-  --text: #1D1D1B;
+  --purple-mid: #8B84E0;
+  --red: #E8262C;
+  --red-dark: #B81B20;
+  --text: #1E1B3A;
   --text-muted: #6B6A8A;
-  --border: #DDDCF0;
-  --bg: #F4F3FA;
+  --border: #E0DFF4;
+  --bg: #F6F5FC;
   --white: #ffffff;
-  --green: #2ECC71;
+  --green: #22C55E;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -33,8 +33,8 @@ body {
 
 /* NAV */
 .topbar {
-  background: var(--purple-deep);
-  border-bottom: 3px solid var(--red);
+  background: var(--purple);
+  border-bottom: 2px solid rgba(255,255,255,.12);
   padding: 0 48px;
   display: flex;
   align-items: center;
@@ -77,7 +77,7 @@ body {
 
 /* HERO */
 .hero {
-  background: var(--purple-deep);
+  background: linear-gradient(145deg, var(--purple-dark) 0%, var(--purple) 100%);
   padding: 80px 48px 88px;
   position: relative;
   overflow: hidden;
@@ -86,18 +86,16 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(135deg, rgba(75,71,200,.6) 0%, transparent 60%),
-    linear-gradient(225deg, rgba(217,43,43,.25) 0%, transparent 50%);
+  background: linear-gradient(225deg, rgba(139,132,224,.2) 0%, transparent 55%);
 }
 .hero::after {
   content: '';
   position: absolute;
-  right: -120px;
-  top: -120px;
-  width: 500px;
-  height: 500px;
-  background: rgba(217,43,43,.06);
+  right: -80px;
+  top: -80px;
+  width: 400px;
+  height: 400px;
+  background: rgba(255,255,255,.04);
   border-radius: 50%;
 }
 .hero-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
@@ -195,7 +193,7 @@ body {
   background: #000; border-radius: 10px;
 }
 .phone-iframe-wrap { flex: 1; overflow: hidden; position: relative; }
-.phone-iframe { width: 390px; height: 100%; border: none; }
+.phone-iframe { width: 390px; height: 100%; border: none; display: block; }
 .phone-close {
   position: absolute; top: 16px; right: 16px;
   background: var(--red); color: white;
@@ -234,7 +232,7 @@ h2 {
   overflow: hidden;
 }
 .qa-question {
-  background: var(--purple-deep);
+  background: var(--purple);
   color: white;
   padding: 20px 28px;
   font-family: 'Inter', sans-serif;
@@ -404,7 +402,7 @@ h2 {
 /* COMPARE TABLE */
 .compare-table { width: 100%; border-collapse: collapse; }
 .compare-table th {
-  background: var(--purple-deep);
+  background: var(--purple-dark);
   color: white;
   font-family: 'Inter', sans-serif;
   font-size: 13px; font-weight: 700;
@@ -468,7 +466,7 @@ h2 {
 
 /* START SECTION */
 .start-section {
-  background: var(--purple-deep);
+  background: linear-gradient(145deg, var(--purple-dark) 0%, var(--purple) 100%);
   color: white;
   padding: 72px 48px;
   position: relative;
@@ -520,8 +518,8 @@ h2 {
 
 /* FOOTER */
 footer {
-  background: var(--purple-deep);
-  border-top: 2px solid rgba(255,255,255,.06);
+  background: var(--purple-dark);
+  border-top: 2px solid rgba(255,255,255,.1);
   padding: 32px 48px;
   display: flex;
   justify-content: space-between;
@@ -566,7 +564,7 @@ footer .copy { font-size: 13px; color: rgba(255,255,255,.35); }
 
 <!-- NAV -->
 <div class="topbar">
-  <a href="#" style="display:flex;align-items:center;"><img src="logo-nav.svg" alt="WEBELEMENT" height="28" style="display:block;"></a>
+  <div class="logo">WEBELEMENT</div>
   <ul class="nav-links">
     <li><a href="#for-whom">Кому подходит</a></li>
     <li><a href="#packages">Состав и цена</a></li>
@@ -728,7 +726,7 @@ footer .copy { font-size: 13px; color: rgba(255,255,255,.35); }
 
     <div style="font-family:'Inter',sans-serif;font-weight:900;font-size:15px;margin-bottom:12px;">Пример готового лендинга</div>
     <div style="border:2px solid var(--border);border-radius:4px;overflow:hidden;">
-      <div style="display:flex;align-items:center;gap:8px;background:var(--purple-deep);border-bottom:1px solid rgba(255,255,255,.06);padding:10px 16px;">
+      <div style="display:flex;align-items:center;gap:8px;background:var(--purple-dark);border-bottom:1px solid rgba(255,255,255,.1);padding:10px 16px;">
         <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
         <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
         <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
@@ -839,7 +837,7 @@ footer .copy { font-size: 13px; color: rgba(255,255,255,.35); }
 </section>
 
 <footer>
-  <img src="logo-nav.svg" alt="WEBELEMENT" height="24" style="display:block;opacity:.7;">
+  <div class="logo" style="font-size:16px;opacity:.75;">WEBELEMENT</div>
   <div class="copy">Внутренний документ · Не для публикации · 2026</div>
 </footer>
 
