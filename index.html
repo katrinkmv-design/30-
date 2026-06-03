@@ -5,27 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Быстрый лендинг — внутренний гайд WEBELEMENT</title>
 <style>
-@font-face {
-  font-family: 'TT Hoves Pro';
-  src: url('fonts/TT_Hoves_Pro_Black.eot');
-  src: url('fonts/TT_Hoves_Pro_Black.eot?#iefix') format('embedded-opentype');
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'TT Hoves Pro';
-  src: url('fonts/TT_Hoves_Pro_Black_Italic.eot');
-  src: url('fonts/TT_Hoves_Pro_Black_Italic.eot?#iefix') format('embedded-opentype');
-  font-weight: 900;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'TT Hoves Pro';
-  src: url('fonts/TT_Hoves_Pro_Bold.eot');
-  src: url('fonts/TT_Hoves_Pro_Bold.eot?#iefix') format('embedded-opentype');
-  font-weight: 700;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
 
 :root {
   --purple: #4A40BA;
@@ -46,7 +26,7 @@
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'TT Hoves Pro', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   font-size: 15px;
   line-height: 1.7;
 }
@@ -65,7 +45,7 @@ body {
   z-index: 200;
 }
 .logo {
-  font-family: 'TT Hoves Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 900;
   font-size: 20px;
   color: var(--white);
@@ -143,7 +123,7 @@ body {
   border-radius: 50%;
 }
 .hero h1 {
-  font-family: 'TT Hoves Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(36px, 4.5vw, 62px);
   font-weight: 900;
   color: white;
@@ -230,13 +210,13 @@ body {
 .wrap { max-width: 1100px; margin: 0 auto; }
 section { padding: 72px 48px; }
 .section-label {
-  font-family: 'TT Hoves Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 11px; font-weight: 700;
   letter-spacing: .15em; text-transform: uppercase;
   color: var(--purple); margin-bottom: 12px;
 }
 h2 {
-  font-family: 'TT Hoves Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: clamp(24px, 3vw, 38px);
   font-weight: 900;
   color: var(--text);
@@ -257,7 +237,7 @@ h2 {
   background: var(--purple-deep);
   color: white;
   padding: 20px 28px;
-  font-family: 'TT Hoves Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 17px;
   font-weight: 900;
   display: flex;
@@ -295,7 +275,7 @@ h2 {
 }
 .segment-icon { font-size: 28px; margin-bottom: 14px; }
 .segment h3 {
-  font-family: 'TT Hoves Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px; font-weight: 900; margin-bottom: 10px;
 }
 .segment p { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
@@ -336,7 +316,7 @@ h2 {
   color: var(--text-muted); margin-bottom: 10px;
 }
 .package-price {
-  font-family: 'TT Hoves Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 48px; font-weight: 900;
   color: var(--purple-dark); line-height: 1; margin-bottom: 6px;
 }
@@ -405,7 +385,7 @@ h2 {
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   margin: 0 auto 16px;
-  font-family: 'TT Hoves Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 900; font-size: 18px; color: var(--purple);
 }
 .step-day {
@@ -416,7 +396,7 @@ h2 {
   padding: 3px 10px; border-radius: 2px; margin-bottom: 10px;
 }
 .step h4 {
-  font-family: 'TT Hoves Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px; font-weight: 900; margin-bottom: 8px;
 }
 .step p { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
@@ -426,7 +406,7 @@ h2 {
 .compare-table th {
   background: var(--purple-deep);
   color: white;
-  font-family: 'TT Hoves Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 13px; font-weight: 700;
   text-align: left; padding: 14px 20px;
   letter-spacing: .03em;
@@ -451,7 +431,7 @@ h2 {
 .brief-col { padding: 32px; }
 .brief-col:first-child { border-right: 1px solid var(--border); }
 .brief-col h3 {
-  font-family: 'TT Hoves Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 15px; font-weight: 900;
   color: var(--purple); margin-bottom: 20px;
   padding-bottom: 12px;
@@ -467,7 +447,7 @@ h2 {
   background: var(--bg); border: 1px solid var(--border);
   border-radius: 3px; padding: 10px 14px;
   font-size: 14px; color: var(--text);
-  width: 100%; font-family: 'TT Hoves Pro', sans-serif;
+  width: 100%; font-family: 'Inter', sans-serif;
   min-height: 36px;
 }
 .field-hint { font-size: 12px; color: var(--text-muted); margin-top: 4px; font-style: italic; }
@@ -477,7 +457,7 @@ h2 {
   display: inline-flex; align-items: center; gap: 8px;
   background: var(--red); color: white;
   border: none;
-  font-family: 'TT Hoves Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 13px; font-weight: 700;
   letter-spacing: .04em; text-transform: uppercase;
   padding: 13px 26px; border-radius: 2px;
@@ -512,13 +492,13 @@ h2 {
   border-radius: 4px; padding: 28px 24px;
 }
 .start-step-num {
-  font-family: 'TT Hoves Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 42px; font-weight: 900;
   color: var(--red); opacity: .7;
   line-height: 1; margin-bottom: 12px;
 }
 .start-step h4 {
-  font-family: 'TT Hoves Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px; font-weight: 900;
   color: white; margin-bottom: 10px;
 }
@@ -531,7 +511,7 @@ h2 {
   border-left: 4px solid var(--red);
 }
 .next-card h4 {
-  font-family: 'TT Hoves Pro', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 15px; font-weight: 900;
   color: white; margin-bottom: 8px;
 }
@@ -624,7 +604,7 @@ footer .copy { font-size: 13px; color: rgba(255,255,255,.35); }
     <div class="info-box blue"><span class="info-icon">💡</span><span>Клиенту не нужно готовить сложные материалы. Нам нужны только основы — остальное делаем мы на базе брифа.</span></div>
     <div class="grid-2" style="margin-top:24px;">
       <div>
-        <h3 style="font-family:'TT Hoves Pro',sans-serif;font-size:15px;font-weight:900;margin-bottom:16px;color:var(--green);">✓ Что нужно от клиента</h3>
+        <h3 style="font-family:'Inter',sans-serif;font-size:15px;font-weight:900;margin-bottom:16px;color:var(--green);">✓ Что нужно от клиента</h3>
         <ul class="include-list">
           <li>Описание продукта или услуги</li>
           <li>Понимание целевой аудитории — кто ваш клиент</li>
@@ -635,7 +615,7 @@ footer .copy { font-size: 13px; color: rgba(255,255,255,.35); }
         </ul>
       </div>
       <div>
-        <h3 style="font-family:'TT Hoves Pro',sans-serif;font-size:15px;font-weight:900;margin-bottom:16px;color:var(--purple);">→ Что берём на себя</h3>
+        <h3 style="font-family:'Inter',sans-serif;font-size:15px;font-weight:900;margin-bottom:16px;color:var(--purple);">→ Что берём на себя</h3>
         <ul class="include-list">
           <li>Анализ ЦА и структура лендинга</li>
           <li>
@@ -738,15 +718,15 @@ footer .copy { font-size: 13px; color: rgba(255,255,255,.35); }
   <div class="qa-answer">
     <div class="info-box blue" style="margin-bottom:24px;"><span class="info-icon">🧱</span><span><strong>7–12 аргументированных блоков</strong> — столько, сколько нужно именно этому продукту. Санаторию с сезонной акцией хватит 7. Авторскому курсу с возражениями нужно 11–12. Нет шаблона «всегда одинаково».</span></div>
     <div class="grid-3" style="gap:12px;margin-bottom:32px;">
-      <div class="card"><div style="font-family:'TT Hoves Pro',sans-serif;font-weight:900;font-size:13px;color:var(--purple);margin-bottom:8px;">01 · Первый экран</div><p style="font-size:13px;color:var(--text-muted);">Заголовок с оффером, подзаголовок с выгодой, кнопка выше сгиба</p></div>
-      <div class="card"><div style="font-family:'TT Hoves Pro',sans-serif;font-weight:900;font-size:13px;color:var(--purple);margin-bottom:8px;">02 · Что вы получаете</div><p style="font-size:13px;color:var(--text-muted);">Конкретные выгоды без воды, с цифрами там, где они есть</p></div>
-      <div class="card"><div style="font-family:'TT Hoves Pro',sans-serif;font-weight:900;font-size:13px;color:var(--purple);margin-bottom:8px;">03 · О компании</div><p style="font-size:13px;color:var(--text-muted);">Коротко: факты, опыт, фото команды или объекта — доверие без пафоса</p></div>
-      <div class="card"><div style="font-family:'TT Hoves Pro',sans-serif;font-weight:900;font-size:13px;color:var(--purple);margin-bottom:8px;">04 · Форма / CTA</div><p style="font-size:13px;color:var(--text-muted);">Имя + телефон, минимум полей, уведомление в Telegram сразу</p></div>
-      <div class="card"><div style="font-family:'TT Hoves Pro',sans-serif;font-weight:900;font-size:13px;color:var(--purple);margin-bottom:8px;">05 · Отзывы / кейсы</div><p style="font-size:13px;color:var(--text-muted);">Реальные отзывы с фото или результаты в цифрах</p></div>
-      <div class="card"><div style="font-family:'TT Hoves Pro',sans-serif;font-weight:900;font-size:13px;color:var(--purple);margin-bottom:8px;">06 · Снятие возражений</div><p style="font-size:13px;color:var(--text-muted);">FAQ: цена, сроки, гарантии. Ответы на страхи, которые мешают оставить заявку</p></div>
+      <div class="card"><div style="font-family:'Inter',sans-serif;font-weight:900;font-size:13px;color:var(--purple);margin-bottom:8px;">01 · Первый экран</div><p style="font-size:13px;color:var(--text-muted);">Заголовок с оффером, подзаголовок с выгодой, кнопка выше сгиба</p></div>
+      <div class="card"><div style="font-family:'Inter',sans-serif;font-weight:900;font-size:13px;color:var(--purple);margin-bottom:8px;">02 · Что вы получаете</div><p style="font-size:13px;color:var(--text-muted);">Конкретные выгоды без воды, с цифрами там, где они есть</p></div>
+      <div class="card"><div style="font-family:'Inter',sans-serif;font-weight:900;font-size:13px;color:var(--purple);margin-bottom:8px;">03 · О компании</div><p style="font-size:13px;color:var(--text-muted);">Коротко: факты, опыт, фото команды или объекта — доверие без пафоса</p></div>
+      <div class="card"><div style="font-family:'Inter',sans-serif;font-weight:900;font-size:13px;color:var(--purple);margin-bottom:8px;">04 · Форма / CTA</div><p style="font-size:13px;color:var(--text-muted);">Имя + телефон, минимум полей, уведомление в Telegram сразу</p></div>
+      <div class="card"><div style="font-family:'Inter',sans-serif;font-weight:900;font-size:13px;color:var(--purple);margin-bottom:8px;">05 · Отзывы / кейсы</div><p style="font-size:13px;color:var(--text-muted);">Реальные отзывы с фото или результаты в цифрах</p></div>
+      <div class="card"><div style="font-family:'Inter',sans-serif;font-weight:900;font-size:13px;color:var(--purple);margin-bottom:8px;">06 · Снятие возражений</div><p style="font-size:13px;color:var(--text-muted);">FAQ: цена, сроки, гарантии. Ответы на страхи, которые мешают оставить заявку</p></div>
     </div>
 
-    <div style="font-family:'TT Hoves Pro',sans-serif;font-weight:900;font-size:15px;margin-bottom:12px;">Пример готового лендинга</div>
+    <div style="font-family:'Inter',sans-serif;font-weight:900;font-size:15px;margin-bottom:12px;">Пример готового лендинга</div>
     <div style="border:2px solid var(--border);border-radius:4px;overflow:hidden;">
       <div style="display:flex;align-items:center;gap:8px;background:var(--purple-deep);border-bottom:1px solid rgba(255,255,255,.06);padding:10px 16px;">
         <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
