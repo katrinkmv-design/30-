@@ -10,17 +10,17 @@
 :root {
   --purple: #4A40BA;
   --purple-dark: #3730A3;
-  --purple-deep: #312B8E;
+  --purple-deep: #2A2580;
   --purple-light: #EDECF8;
   --purple-mid: #8B84E0;
   --red: #E8262C;
   --red-dark: #B81B20;
   --text: #1E1B3A;
-  --text-muted: #6B6A8A;
-  --border: #E0DFF4;
-  --bg: #F6F5FC;
+  --text-muted: #5A5880;
+  --border: #D8D6EF;
+  --bg: #F4F3FB;
   --white: #ffffff;
-  --green: #22C55E;
+  --green: #16A34A;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -33,8 +33,8 @@ body {
 
 /* NAV */
 .topbar {
-  background: var(--purple);
-  border-bottom: 2px solid rgba(255,255,255,.12);
+  background: var(--purple-deep);
+  border-bottom: 3px solid var(--red);
   padding: 0 48px;
   display: flex;
   align-items: center;
@@ -56,14 +56,14 @@ body {
 .nav-links a {
   font-size: 13px;
   font-weight: 700;
-  color: rgba(255,255,255,.55);
+  color: rgba(255,255,255,.82);
   text-decoration: none;
   padding: 6px 12px;
   border-radius: 3px;
   letter-spacing: .03em;
-  transition: all .15s;
+  transition: all .18s;
 }
-.nav-links a:hover { background: rgba(255,255,255,.08); color: white; }
+.nav-links a:hover { background: rgba(255,255,255,.14); color: white; }
 .nav-badge {
   background: var(--red);
   color: white;
@@ -77,8 +77,8 @@ body {
 
 /* HERO */
 .hero {
-  background: linear-gradient(145deg, var(--purple-dark) 0%, var(--purple) 100%);
-  padding: 80px 48px 88px;
+  background: linear-gradient(140deg, var(--purple-deep) 0%, var(--purple-dark) 45%, var(--purple) 100%);
+  padding: 88px 48px 96px;
   position: relative;
   overflow: hidden;
 }
@@ -86,16 +86,16 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(225deg, rgba(139,132,224,.2) 0%, transparent 55%);
+  background: radial-gradient(ellipse at 80% 50%, rgba(232,38,44,.12) 0%, transparent 60%);
 }
 .hero::after {
   content: '';
   position: absolute;
-  right: -80px;
-  top: -80px;
-  width: 400px;
-  height: 400px;
-  background: rgba(255,255,255,.04);
+  left: -120px;
+  bottom: -120px;
+  width: 480px;
+  height: 480px;
+  background: rgba(255,255,255,.03);
   border-radius: 50%;
 }
 .hero-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
@@ -104,8 +104,8 @@ body {
   align-items: center;
   gap: 8px;
   background: rgba(255,255,255,.07);
-  border: 1px solid rgba(255,255,255,.15);
-  color: rgba(255,255,255,.8);
+  border: 1px solid rgba(255,255,255,.2);
+  color: rgba(255,255,255,.9);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: .12em;
@@ -122,43 +122,53 @@ body {
 }
 .hero h1 {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(36px, 4.5vw, 62px);
+  font-size: clamp(40px, 5vw, 68px);
   font-weight: 900;
   color: white;
-  line-height: 1.0;
-  margin-bottom: 24px;
-  max-width: 740px;
-  letter-spacing: -.01em;
+  line-height: .98;
+  margin-bottom: 28px;
+  max-width: 780px;
+  letter-spacing: -.02em;
 }
 .hero h1 em {
-  font-style: italic;
+  font-style: normal;
   color: var(--red);
+  background: linear-gradient(90deg, #E8262C, #FF6B6B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .hero-sub {
-  font-size: 16px;
-  color: rgba(255,255,255,.65);
-  max-width: 560px;
-  margin-bottom: 48px;
-  line-height: 1.75;
+  font-size: 17px;
+  color: rgba(255,255,255,.8);
+  max-width: 580px;
+  margin-bottom: 44px;
+  line-height: 1.7;
 }
-.hero-pills { display: flex; gap: 10px; flex-wrap: wrap; }
+.hero-pills { display: flex; gap: 12px; flex-wrap: wrap; }
 .pill {
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.22);
   color: white;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: .02em;
-  padding: 10px 20px;
-  border-radius: 2px;
+  padding: 11px 22px;
+  border-radius: 3px;
   display: flex;
   align-items: center;
   gap: 8px;
   text-decoration: none;
   cursor: pointer;
-  transition: all .15s;
+  transition: all .2s cubic-bezier(.25,.8,.25,1);
 }
-.pill:hover { background: rgba(217,43,43,.3); border-color: rgba(217,43,43,.5); }
+.pill:hover {
+  background: rgba(232,38,44,.35);
+  border-color: rgba(232,38,44,.6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+}
+.pill:active { transform: translateY(0); }
 .pill-icon { font-size: 15px; }
 
 /* MOBILE OVERLAY */
@@ -227,28 +237,30 @@ h2 {
 .qa-block {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 4px;
-  margin-bottom: 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
   overflow: hidden;
+  box-shadow: 0 2px 12px rgba(74,64,186,.06);
 }
 .qa-question {
-  background: var(--purple);
+  background: linear-gradient(135deg, var(--purple-deep) 0%, var(--purple) 100%);
   color: white;
-  padding: 20px 28px;
+  padding: 22px 28px;
   font-family: 'Inter', sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 900;
   display: flex;
   align-items: center;
   gap: 14px;
-  letter-spacing: -.01em;
+  letter-spacing: -.02em;
 }
 .qa-num {
   background: var(--red);
-  width: 30px; height: 30px;
-  border-radius: 2px;
+  width: 32px; height: 32px;
+  border-radius: 3px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 13px; font-weight: 900; flex-shrink: 0;
+  font-size: 14px; font-weight: 900; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(232,38,44,.4);
 }
 .qa-answer { padding: 28px; }
 
@@ -261,16 +273,20 @@ h2 {
 .card {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 24px;
+  transition: box-shadow .2s, transform .2s;
 }
+.card:hover { box-shadow: 0 4px 16px rgba(74,64,186,.1); transform: translateY(-1px); }
 .segment {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 28px 24px;
-  border-top: 3px solid var(--purple);
+  border-top: 4px solid var(--purple);
+  transition: box-shadow .2s, transform .2s;
 }
+.segment:hover { box-shadow: 0 6px 20px rgba(74,64,186,.12); transform: translateY(-2px); }
 .segment-icon { font-size: 28px; margin-bottom: 14px; }
 .segment h3 {
   font-family: 'Inter', sans-serif;
@@ -457,16 +473,23 @@ h2 {
   border: none;
   font-family: 'Inter', sans-serif;
   font-size: 13px; font-weight: 700;
-  letter-spacing: .04em; text-transform: uppercase;
-  padding: 13px 26px; border-radius: 2px;
+  letter-spacing: .05em; text-transform: uppercase;
+  padding: 14px 28px; border-radius: 3px;
   cursor: pointer; text-decoration: none;
-  margin-top: 20px; transition: background .15s;
+  margin-top: 20px;
+  transition: all .22s cubic-bezier(.25,.8,.25,1);
+  box-shadow: 0 2px 8px rgba(232,38,44,.3);
 }
-.btn-primary:hover { background: var(--red-dark); }
+.btn-primary:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232,38,44,.45);
+}
+.btn-primary:active { transform: translateY(0); box-shadow: 0 2px 8px rgba(232,38,44,.3); }
 
 /* START SECTION */
 .start-section {
-  background: linear-gradient(145deg, var(--purple-dark) 0%, var(--purple) 100%);
+  background: linear-gradient(140deg, var(--purple-deep) 0%, var(--purple-dark) 50%, var(--purple) 100%);
   color: white;
   padding: 72px 48px;
   position: relative;
@@ -475,8 +498,8 @@ h2 {
 .start-section::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, var(--red), var(--purple-mid));
+  top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--red) 0%, #FF6B6B 50%, var(--purple-mid) 100%);
 }
 .start-section h2 { color: white; }
 .start-steps {
@@ -578,15 +601,13 @@ footer .copy { font-size: 13px; color: rgba(255,255,255,.35); }
 <!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
-    <div class="hero-label">Новый продукт студии · 2026</div>
-    <h1>Быстрый лендинг:<br><em>7 рабочих дней,</em> 30 000 ₽</h1>
-    <p class="hero-sub">Внутренний гайд для аккаунт-менеджеров. Здесь — ответы на все вопросы клиента: что входит, кому подходит, как устроен бриф и с чего начать.</p>
+    <div class="hero-label">Внутренний гайд · WEBELEMENT · 2026</div>
+    <h1>Быстрый лендинг —<br><em>7 дней, 30 000 ₽</em></h1>
+    <p class="hero-sub">Гайд для аккаунт-менеджеров: что входит, кому подходит, как заполнить бриф и запустить проект.</p>
     <div class="hero-pills">
-      <a href="#brief" class="pill"><span class="pill-icon">📋</span> Перейти к брифу</a>
-      <a class="pill" onclick="downloadBrief()"><span class="pill-icon">⬇</span> Скачать бриф PDF</a>
-      <a href="#for-whom" class="pill"><span class="pill-icon">🎯</span> Кому подходит</a>
+      <a href="#brief" class="pill"><span class="pill-icon">📋</span> Открыть бриф</a>
       <a href="#packages" class="pill"><span class="pill-icon">💰</span> Состав и цена</a>
-      <a class="pill" onclick="openMobile()"><span class="pill-icon">📱</span> Смотреть как на телефоне</a>
+      <a class="pill" onclick="openMobile()"><span class="pill-icon">📱</span> Пример на телефоне</a>
     </div>
   </div>
 </div>
