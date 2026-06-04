@@ -94,6 +94,7 @@ body::after {
   animation: robotIn .9s cubic-bezier(0.22,1,0.36,1) .5s forwards;
   pointer-events: none;
   filter: drop-shadow(0 40px 80px rgba(27,45,79,.18));
+  mix-blend-mode: multiply;
 }
 @keyframes robotIn {
   from { opacity: 0; transform: translateX(60px) translateY(20px); }
@@ -620,7 +621,7 @@ footer { border-top: 1px solid var(--border); padding: 32px 48px; display: flex;
 <div class="qa-block reveal" id="for-whom">
   <div class="qa-question"><div class="qa-num">2</div><div class="qa-question-text">Кому подходит этот продукт?</div></div>
   <div class="qa-answer" style="position:relative;overflow:hidden;">
-    <img src="meduza.png.png" alt="" style="position:absolute;right:-60px;top:-40px;width:320px;opacity:.07;pointer-events:none;filter:blur(2px);transform:rotate(15deg);" aria-hidden="true">
+    <img src="meduza.png.png" alt="" style="position:absolute;right:-40px;top:-20px;width:340px;opacity:.18;pointer-events:none;mix-blend-mode:multiply;transform:rotate(10deg);" aria-hidden="true">
     <div class="info-box orange"><span class="info-icon">⚠️</span><span><strong>Важно аккаунтам:</strong> этот продукт не конкурирует с полноценным сайтом. Он решает одну задачу — быстрая посадочная страница под один оффер.</span></div>
     <div class="grid-3" style="margin-top:24px;">
       <div class="segment">
