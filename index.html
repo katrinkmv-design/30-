@@ -94,8 +94,8 @@ body::after {
   animation: robotIn .9s cubic-bezier(0.22,1,0.36,1) .5s forwards;
   pointer-events: none;
   /* Screen mode: белый фон исчезает, тёмные детали остаются */
-  mix-blend-mode: darken;
-  filter: contrast(1.08) drop-shadow(0 32px 64px rgba(27,45,79,.15));
+  mix-blend-mode: normal;
+  filter: drop-shadow(0 32px 64px rgba(27,45,79,.15));
 }
 @keyframes robotIn {
   from { opacity: 0; transform: translateX(60px) translateY(20px); }
@@ -624,8 +624,8 @@ footer { border-top: 1px solid var(--border); padding: 32px 48px; display: flex;
 </div>
 
 <div style="position:relative;">
-  <img src="meduza.png.png" alt="" aria-hidden="true" style="position:absolute;left:-120px;top:50%;transform:translateY(-50%);width:280px;opacity:.5;pointer-events:none;mix-blend-mode:darken;z-index:0;">
-  <img src="meduza.png.png" alt="" aria-hidden="true" style="position:absolute;right:-120px;top:50%;transform:translateY(-50%) scaleX(-1);width:240px;opacity:.4;pointer-events:none;mix-blend-mode:darken;z-index:0;">
+  <img src="meduza.png.png" alt="" aria-hidden="true" style="position:absolute;left:-120px;top:50%;transform:translateY(-50%);width:280px;opacity:.5;pointer-events:none;mix-blend-mode:normal;z-index:0;">
+  <img src="meduza.png.png" alt="" aria-hidden="true" style="position:absolute;right:-120px;top:50%;transform:translateY(-50%) scaleX(-1);width:240px;opacity:.4;pointer-events:none;mix-blend-mode:normal;z-index:0;">
 <div class="qa-block reveal" id="for-whom" style="position:relative;z-index:1;">
   <div class="qa-question"><div class="qa-num">2</div><div class="qa-question-text">Кому подходит этот продукт?</div></div>
   <div class="qa-answer">
@@ -799,7 +799,7 @@ footer { border-top: 1px solid var(--border); padding: 32px 48px; display: flex;
 
 <!-- START -->
 <section class="start-section" id="start" style="position:relative;overflow:hidden;">
-<img src="W.png.png" alt="" style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:clamp(300px,35vw,480px);opacity:.12;pointer-events:none;mix-blend-mode:darken;" aria-hidden="true">
+<img src="W.png.png" alt="" style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:clamp(300px,35vw,480px);opacity:.12;pointer-events:none;mix-blend-mode:normal;" aria-hidden="true">
 <div class="deco-plus" style="top:48px;right:48px;"></div>
 <div class="deco-circle" style="width:300px;height:300px;bottom:-100px;left:-80px;opacity:.5;"></div>
 <div class="wrap">
