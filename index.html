@@ -32,6 +32,13 @@
 html { scroll-behavior: smooth; }
 body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7; overflow-x: hidden; }
 
+/* Sharp rendering for all decorative images */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+
 /* ── BG GRADIENT ── */
 body::after {
   content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
@@ -94,6 +101,9 @@ body::after {
   animation: robotIn .9s cubic-bezier(0.22,1,0.36,1) .5s forwards;
   pointer-events: none;
   filter: drop-shadow(0 32px 64px rgba(27,45,79,.15));
+  image-rendering: -webkit-optimize-contrast;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
 }
 @keyframes robotIn {
   from { opacity: 0; transform: translateX(-60px) translateY(20px); }
